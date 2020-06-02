@@ -21,15 +21,13 @@ if __name__ == '__main__':
 	figure(figsize=(15, 15))
 	sobel_x, sobel_y = get_sobel_edge_dection(im)
 
-	subplot(2, 2, 1, title='Original')
+	subplot(3, 1, 1, title='Original')
 	imshow(Image.open(im_link))
 
-	subplot(2, 2, 2, title='Sobel x')
+	subplot(3, 1, 2, title='Sobel x')
 	imshow(sobel_x, cmap ='gray')
 	
-	subplot(2, 2, 3, title='Sobel y')
+	subplot(3, 1, 3, title='Sobel y')
 	imshow(sobel_y, cmap ='gray')
-	
-	subplot(2, 2, 4, title='Sobel x + y')
-	imshow(sobel_x + sobel_y, cmap ='gray')
+
 	show()
